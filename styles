@@ -1,0 +1,827 @@
+* {box-sizing:border-box}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+
+    height: 50px;
+    background-color: #e7af45;
+    padding: 0 5px;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    top:0; left:0; right: 0;
+    z-index: 99999;
+    background-image: url(./logo.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 140px;
+    justify-content: flex-end;
+    font-size: 30px;
+    
+}
+
+
+.mostrarhamburguesa, .esconderhamburguesa {
+    display: block;
+}
+
+.comienzo {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    right: -100%;
+    top: 0%;
+    text-align: center;
+    padding: 80px 0px;
+    z-index: 9999;
+    transition: 0.6s;
+}
+
+.titulo, .TextoCentrado, h3{
+    margin: 10px;
+}
+.comienzo a{
+    display: block;
+    padding: 20px;
+}
+
+.esconderhamburguesa{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+#tilde:checked ~ .opciones {
+    right: 0;
+}
+
+#tilde {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    animation: cambio 25s infinite
+    alternate linear;
+    width: 400%;
+    margin-top: 0;
+    padding-left: 0%;
+    padding-top: 0;
+
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+    height: -100%;
+}
+
+.contenedormascota {
+background-color: rgb(252, 185, 0);
+border-radius: 15px;
+width: 95%;
+margin: 10px auto;
+padding: 10px;
+}
+
+.mascota1, .mascota2, .mascota3, .mascota4, .mascota5, .mascota6, .mascota7, .mascota8, .mascota9, .mascota10, .mascota11, .mascota12, .mascota1perro, .mascota2perro, .mascota3gato, .mascota4gato, .mascota5gato, .mascota6perro{
+    background-color: white;
+    width: 95%;
+    border-radius: 15px;
+    margin: 20px auto;
+    height: 500px;
+}
+
+div a {
+    text-decoration: none;
+    color: blue;
+}
+
+div a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.accordion {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 90%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+/*Contenedor común plegar/desplegar*/
+.accordion-toggle,
+.accordion-header{
+  font-size: 15px;
+  width: 100%;
+  height: 3em;
+  margin: 0;
+  line-height: 3em;
+  cursor: pointer;
+}
+/*El botón que pliega/despliega*/
+.accordion-toggle {
+  opacity: 0;
+  background-color: transparent;
+  z-index: 1;
+  margin-bottom: 2px;
+}
+/*Bloque para el título*/
+.accordion-header{
+  background-color: #ffc400;
+  color: #7f8787;
+  position: relative;
+  margin-top: -3em;
+  padding-left: 10px
+}
+
+/*Bloque replegable con el contenido */
+.accordion-content {
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  color: #7f8787;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-bottom: -250px;
+  padding: 20px;
+  transition: margin 0.3s ease 0.1s;
+  }
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.accordion-header::before,
+.accordion-toggle:checked + .accordion-header::before {
+  content: '+';
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+  font-size: 1.em;
+}
+.accordion-toggle:checked + .accordion-header::before {
+  content:'-';
+}
+
+.accordion-toggle:hover + .accordion-header{
+  background-color: #ffffff;
+}
+.accordion-toggle:checked + .accordion-header {
+  background-color: #ddb11f;
+}
+
+.mascotarequisito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mascota1 {
+    background-image: url(./mascotas1.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota1perro {
+    background-image: url(./mascota1perro.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota2 {
+    background-image: url(./mascotas2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota2perro {
+    background-image: url(./mascotaperro2.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota3 {
+    background-image: url(./mascotas3.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota3gato {
+    background-image: url(./mascota3gato.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota4 {
+    background-image: url(./mascotas4.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota4gato {
+    background-image: url(./mascota4gato.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota5 {
+    background-image: url(./mascotas6.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota5gato {
+    background-image: url(./mascota5gato.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota6 {
+    background-image: url(./mascotas7.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota6perro{
+    background-image: url(./mascota6perro.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota7 {
+    background-image: url(./mascota7.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota8 {
+    background-image: url(./mascota8.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota9 {
+    background-image: url(./mascota9.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota10 {
+    background-image: url(./mascota10.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota11 {
+    background-image: url(./mascota11.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.mascota12 {
+    background-image: url(./mascota12.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding-top: 100%;
+}
+
+.contenedormascota h3, p {
+    margin: 10px;
+}
+
+.contenedormascota button {
+    background-color: transparent;
+    border:  2px solid blue;
+    border-radius: 10px;
+    padding: 5px;
+    color: blue;
+    margin-left: 180px;
+}
+
+.contenedormascota button:hover {
+    background-color: blue;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+.mascotarequisito img {
+    width: 90%;
+    border: 8px solid blue;
+    border-radius: 15px;
+    
+}
+
+.requisitos .contenedor-requisitos {
+    background-color: blue;
+    width: 90%;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+
+footer {
+	background-color: #e7af45;
+	margin: 0;
+	padding: 10px;
+	text-decoration: none;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.contenedor-de-columnas{
+    display: flex;
+    flex-direction: column;
+    max-width:1024px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+
+.primercolumna {
+    padding-top: 20px;
+    list-style:none;
+}
+
+.segundacolumna{
+    padding-top: 20px;
+    list-style:none;
+}
+
+.listas {
+    padding: 5px;
+}
+
+.listacopyright {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.tercercolumna{
+    padding-top: 50px;
+    list-style: none;
+}
+
+#form{
+    background-color: #3500b1;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 98%;
+    height: 50%;
+}
+
+#nombre {
+    padding-top: 20px;
+}
+
+#apellido{
+    padding-top: 20px;
+}
+
+#correo{
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+#comentario{
+    padding-top: 20px;
+}
+
+
+
+
+.pregdetalle {
+    padding:16px;
+    border:none;
+    border-bottom: 2px solid #8d8c8b;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.enviarpreg{
+    background-color: rgb(194, 158, 0);
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    float: right;
+    margin-top: -20px;
+}
+
+
+.panelpreguntas {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mapa {
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 40%;
+}
+
+.mapa iframe {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    max-width: 712px;
+    max-height: 435px;
+}
+
+
+
+
+@media only screen and (min-width:210px) {
+
+
+    
+        .mascota1, .mascota2, .mascota3, .mascota4, .mascota5, .mascota6, .mascota7, .mascota8, .mascota9, .mascota10, .mascota11, .mascota12, .mascota1perro, .mascota2perro, .mascota3gato, .mascota4gato, .mascota5gato, .mascota6perro {
+            background-color: white;
+            width: 95%;
+            border-radius: 15px;
+            margin: 20px auto;
+            height: 98%;
+        }
+
+        .contenedormascota button {
+            background-color: transparent;
+            border:  2px solid blue;
+            border-radius: 10px;
+            padding: 5px;
+            color: blue;
+            margin-left: 65%;
+        }
+
+}
+
+@media only screen and (min-width:768px) {
+    header {
+        padding-left: 60px;
+    }
+
+    .mostrarhamburguesa, .esconderhamburguesa {
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+        transition: 0.3s;
+    }
+    
+    .mostrarhamburguesa{
+        order: 1;
+    }
+    
+    #tilde {
+        display: none;
+    }
+
+        .comienzo {
+        display: flex;
+        background-color: none;
+        height: 0;
+        text-align: center;
+        position: relative;
+        align-items: center;
+        overflow:visible;
+        justify-content: flex-end;
+        padding:0px;
+        right: 0%;
+    }
+
+    .comienzo a{
+        text-decoration: none;
+        padding: 14px 10px;
+        color: black;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .comienzo a:hover {
+        border-bottom: 3px solid rgb(41, 0, 189);
+        color: rgb(17, 0, 255);
+    }
+
+    
+    .comienzo a:hover,
+    .mostrarhamburguesa a:hover,
+    .esconderhamburguesa a:hover {
+        color: rgb(150, 150, 150);
+    }
+
+    .contenedor-de-columnas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width:1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    .primercolumna {
+        width: 40%;
+        list-style:none;
+    }
+    
+    .segundacolumna{
+        width: 60%;
+        list-style:none;
+    }
+
+    
+    .listacopyright {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .tercercolumna{
+        width: 35%;
+        padding-top: 50px;
+        list-style: none;
+    }
+
+    .contenedorpublicacion{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mascota1, .mascota2, .mascota3, .mascota4, .mascota5, .mascota6, .mascota7, .mascota8, .mascota9, .mascota10, .mascota11, .mascota12{
+        background-color: white;
+        width: 95%;
+        border-radius: 15px;
+        margin: 20px auto;
+        height: 98%;
+    }
+
+    .contenedormascota button {
+        background-color: transparent;
+        border:  2px solid blue;
+        border-radius: 10px;
+        padding: 5px;
+        color: blue;
+        margin-left: 65%;
+    }
+
+    .requisitos {
+        display: grid;
+        grid-template-columns: 6fr 4fr; 
+    }
+
+    .panelpreguntas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+
+    .mapa {
+        padding-bottom: 60%;
+    }
+
+    #form {
+        height: 97%;
+    }
+
+}
+
+@media only screen and (min-width:1024px) {
+
+
+    .mostrarhamburguesa, .esconderhamburguesa {
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+        transition: 0.3s;
+    }
+    
+    .mostrarhamburguesa{
+        order: 1;
+    }
+    
+    #tilde {
+        display: none;
+    }
+    
+    .comienzo a:hover,
+    .mostrarhamburguesa a:hover,
+    .esconderhamburguesa a:hover {
+        color: rgb(150, 150, 150);
+    }
+
+    .contenedor-de-columnas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width:1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    .primercolumna {
+        width: 40%;
+        padding-top: 20px;
+        list-style:none;
+    }
+    
+    .segundacolumna{
+        width: 60%;
+        padding-top: 20px;
+        list-style:none;
+    }
+
+    .listas {
+        padding: 5px;
+    }
+    
+    .listacopyright {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .tercercolumna{
+        width: 35%;
+        padding-top: 50px;
+        list-style: none;
+    }
+
+    .contenedorpublicacion{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .mascota1, .mascota2, .mascota3, .mascota4, .mascota5, .mascota6, .mascota7, .mascota8, .mascota9, .mascota10, .mascota11, .mascota12 {
+        background-color: white;
+        width: 95%;
+        border-radius: 15px;
+        margin: 20px auto;
+        height: 97%;
+    }
+
+    .contenedormascota button {
+        background-color: transparent;
+        border:  2px solid blue;
+        border-radius: 10px;
+        padding: 5px;
+        color: blue;
+        margin-left: 65%;
+    }
+
+    .requisitos {
+        display: grid;
+        grid-template-columns: 6fr 4fr; 
+    }
+
+    .panelpreguntas {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    
+    }
+
+
+}
+
+@media only screen and (min-width:1440px) {
+    .mascota1, .mascota2, .mascota3, .mascota4, .mascota5, .mascota6 {
+        background-color: white;
+        width: 95%;
+        border-radius: 15px;
+        margin: 20px auto;
+        height: 97%;
+    }
+
+    .contenedormascota button {
+        background-color: transparent;
+        border:  2px solid blue;
+        border-radius: 10px;
+        padding: 5px;
+        color: blue;
+        margin-left: 65%;
+    }
+
+}
+
+
+
+
